@@ -10,7 +10,7 @@ import {
 } from './Contact-Book/ContactBook.Styled';
 import { getFilteredData } from 'helpers/getFilteredData';
 import { toast } from 'react-toastify';
-
+import { Phone, BookUser } from 'lucide-react';
 export class App extends React.Component {
   state = {
     contacts: [
@@ -74,7 +74,9 @@ export class App extends React.Component {
 
         <ContentContainer>
           <PhoneBookContainer>
-            <PhoneBookTitle>PhoneBook</PhoneBookTitle>
+            <PhoneBookTitle>
+              PhoneBook <Phone strokeWidth={1.5} />
+            </PhoneBookTitle>
 
             <ContactForm
               addContact={this.addContact}
@@ -82,7 +84,9 @@ export class App extends React.Component {
               isNumberExists={this.isNumberExists}
             />
 
-            <PhoneBookContactTitle>Contacts</PhoneBookContactTitle>
+            <PhoneBookContactTitle>
+              Contacts <BookUser strokeWidth={1.5} />
+            </PhoneBookContactTitle>
 
             <Filter setFilter={this.handleFilterChange} filter={filter} />
 
